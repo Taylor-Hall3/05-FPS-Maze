@@ -1,0 +1,11 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[sub_resource type="LargeTexture" id=1]
+
+[resource]
+albedo_color = Color( 0, 0, 0, 0.792157 )
+metallic = 1.0
+metallic_specular = 0.78
+roughness = 0.47
+roughness_texture = SubResource( 1 )
+roughness_texture_channel = 2

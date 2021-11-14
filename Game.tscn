@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/background.wav" type="AudioStream" id=1]
+[ext_resource path="res://Maze/Maze.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/man_murmur.wav" type="AudioStream" id=3]
+[ext_resource path="res://Menu/Menu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/jewel.wav" type="AudioStream" id=5]
+
+[node name="Game" type="Spatial"]
+
+[node name="Maze" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 0, 20 )
+
+[node name="Music" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="jewel" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 5 )
+
+[node name="Robot" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Menu" parent="UI" instance=ExtResource( 4 )]
